@@ -7,8 +7,8 @@ Here is the Vagrantfile to spin up wer vagrant box.
 
 Use the following image name for CentOS 7 and CentOS 8 -
 
-### CentOS 7 : - [centos/7](https://app.vagrantup.com/centos/boxes/7)
-### CentOS 8 : - [centos/8](https://app.vagrantup.com/centos/boxes/8)
+### > CentOS 7 : - [centos/7](https://app.vagrantup.com/centos/boxes/7)
+### > CentOS 8 : - [centos/8](https://app.vagrantup.com/centos/boxes/8)
 Based on wer need we need to update the following vagrantfile.
 
 We are going with two VMs here -
