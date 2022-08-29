@@ -7,8 +7,8 @@ Here is the Vagrantfile to spin up wer vagrant box.
 
 Use the following image name for CentOS 7 and CentOS 8 -
 
-### CentOS 7 : - bento/centos-7
-### CentOS 8 : - centos/stream8
+### CentOS 7 : - [centos/7](https://app.vagrantup.com/centos/boxes/7)
+### CentOS 8 : - [centos/8](https://app.vagrantup.com/centos/boxes/8)
 Based on wer need we need to update the following vagrantfile.
 
 We are going with two VMs here -
@@ -65,6 +65,8 @@ Command: ["hostonlyif", "create"]
 #
 
 ## Step 2: Update /etc/hosts on both nodes(master, worker)
+> Error: (Vagrant::Util::Subprocess::LaunchError): USE GITBASH to resolve
+
 * master node - SSH into the master node
 ```sh
 vagrant ssh master
