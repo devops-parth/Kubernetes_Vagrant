@@ -221,6 +221,17 @@ sudo systemctl start kubelet
 sudo systemctl status kubelet
 ```
 
+## Step 11: Initialize Kubernetes cluster only on master node
+
+> Initialize the Kubernetes cluster (-apiserver-advertise-address=100.0.0.1 this is the IP address we have assigned in the /etc/hosts)
+```sh
+sudo kubeadm init --apiserver-advertise-address=100.0.0.1 --pod-network-cidr=10.244.0.0/16
+
+#Note down the kubeadm join command
+kubeadm join 100.0.0.1:6443 --token cfvd1x.8h8kzx0u9vcn4trf \
+    --discovery-token-ca-cert-hash sha256:cc9687b47f3a9bfa5b880dcf409eeaef05d25505f4c099732b65376b0e14458c
+```
+
 $$ \textcolor{red}{TROUBLESHOOT ~3} $$
 ```sh
 
@@ -243,18 +254,6 @@ error execution phase preflight: [preflight] Some fatal errors occurred:
 ```
 **==Refer End of File==**
 #
-
-
-## Step 11: Initialize Kubernetes cluster only on master node
-
-> Initialize the Kubernetes cluster (-apiserver-advertise-address=100.0.0.1 this is the IP address we have assigned in the /etc/hosts)
-```sh
-sudo kubeadm init --apiserver-advertise-address=100.0.0.1 --pod-network-cidr=10.244.0.0/16
-
-#Note down the kubeadm join command
-kubeadm join 100.0.0.1:6443 --token cfvd1x.8h8kzx0u9vcn4trf \
-    --discovery-token-ca-cert-hash sha256:cc9687b47f3a9bfa5b880dcf409eeaef05d25505f4c099732b65376b0e14458c
-```
 
 ## Step 12: Move kube config file to current user (only run on master)
 > To interact with the Kubernetes cluster and to use kubectl command, we need to have the Kube config file with us.
