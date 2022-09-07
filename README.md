@@ -80,8 +80,8 @@ sudo vi /etc/hosts
 vagrant ssh worker
 
 vagrant@worker:~$sudo vi /etc/hosts
-100.0.0.1 master.jhooq.com master
-100.0.0.2 worker.jhooq.com worker
+100.0.0.1 master.ppd.com master
+100.0.0.2 worker.ppd.com worker
 ```
 * Test the worker node by sending ping from master
 
