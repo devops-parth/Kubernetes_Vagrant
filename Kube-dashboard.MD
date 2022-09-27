@@ -116,7 +116,7 @@ metadata:
 spec:
  replicas: 2 
  selector:
-   matchlabels:
+   matchLabels:
      jmeter_mode: slave
  template:
    metadata: 
